@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Under Construction</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      background:linear-gradient(135deg,#111,#1f1f1f,#000);
+      overflow:hidden;
+      color:white;
+    }
+
+    .container{
+      text-align:center;
+      padding:40px;
+      border:2px solid rgba(255,255,255,0.1);
+      border-radius:20px;
+      background:rgba(255,255,255,0.05);
+      backdrop-filter:blur(10px);
+      box-shadow:0 0 30px rgba(255,255,0,0.2);
+    }
+
+    h1{
+      font-size:70px;
+      color:#ffd000;
+      text-transform:uppercase;
+      letter-spacing:4px;
+      animation:glow 2s infinite alternate;
+    }
+
+    p{
+      margin-top:15px;
+      font-size:18px;
+      color:#ddd;
+    }
+
+    .loader{
+      margin:30px auto 0;
+      width:70px;
+      height:70px;
+      border:8px solid rgba(255,255,255,0.2);
+      border-top:8px solid #ffd000;
+      border-radius:50%;
+      animation:spin 1s linear infinite;
+    }
+
+    @keyframes spin{
+      100%{
+        transform:rotate(360deg);
+      }
+    }
+
+    @keyframes glow{
+      from{
+        text-shadow:0 0 10px #ffd000;
+      }
+      to{
+        text-shadow:0 0 25px #ffd000,0 0 50px #ffea00;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Under Construction</h1>
+    <p>We're working hard to launch something amazing.</p>
+
+    <div class="loader"></div>
+  </div>
+
+</body>
+</html>
