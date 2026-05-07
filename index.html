@@ -3,84 +3,129 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Under Construction</title>
+  <title>Arena Animation GTB Nagar</title>
 
   <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:Arial, sans-serif;
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      color: #111;
     }
 
-    body{
-      height:100vh;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      background:linear-gradient(135deg,#111,#1f1f1f,#000);
-      overflow:hidden;
-      color:white;
+    header {
+      background: #111;
+      color: white;
+      padding: 15px;
+      text-align: center;
     }
 
-    .container{
-      text-align:center;
-      padding:40px;
-      border:2px solid rgba(255,255,255,0.1);
-      border-radius:20px;
-      background:rgba(255,255,255,0.05);
-      backdrop-filter:blur(10px);
-      box-shadow:0 0 30px rgba(255,255,0,0.2);
+    nav {
+      text-align: center;
+      background: #eee;
+      padding: 10px;
     }
 
-    h1{
-      font-size:70px;
-      color:#ffd000;
-      text-transform:uppercase;
-      letter-spacing:4px;
-      animation:glow 2s infinite alternate;
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #111;
+      font-weight: bold;
     }
 
-    p{
-      margin-top:15px;
-      font-size:18px;
-      color:#ddd;
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
     }
 
-    .loader{
-      margin:30px auto 0;
-      width:70px;
-      height:70px;
-      border:8px solid rgba(255,255,255,0.2);
-      border-top:8px solid #ffd000;
-      border-radius:50%;
-      animation:spin 1s linear infinite;
+    .hero {
+      text-align: center;
+      background: white;
+      padding: 60px 20px;
     }
 
-    @keyframes spin{
-      100%{
-        transform:rotate(360deg);
-      }
+    .hero h1 {
+      margin: 0;
+      font-size: 32px;
     }
 
-    @keyframes glow{
-      from{
-        text-shadow:0 0 10px #ffd000;
-      }
-      to{
-        text-shadow:0 0 25px #ffd000,0 0 50px #ffea00;
-      }
+    .hero p {
+      color: #555;
+      margin-top: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #111;
+      color: white;
+      text-decoration: none;
+    }
+
+    .box {
+      background: white;
+      padding: 20px;
+      margin-top: 20px;
+      border: 1px solid #ddd;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #111;
+      color: white;
+      margin-top: 40px;
     }
   </style>
 </head>
+
 <body>
 
-  <div class="container">
-    <h1>Under Construction</h1>
-    <p>We're working hard to launch something amazing.</p>
+  <header>
+    <h2>Arena Animation GTB Nagar</h2>
+  </header>
 
-    <div class="loader"></div>
-  </div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#courses">Courses</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section class="hero" id="home">
+    <h1>Build Your Creative Future</h1>
+    <p>Learn Animation, VFX, Design & More</p>
+    <a href="#courses" class="btn">Explore Courses</a>
+  </section>
+
+  <section id="courses">
+    <h2>Courses</h2>
+
+    <div class="box">Animation & VFX</div>
+    <div class="box">UI/UX Design</div>
+    <div class="box">Graphic Design</div>
+    <div class="box">Game Development</div>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>
+      Arena Animation GTB Nagar is a creative institute in Delhi offering industry-focused training
+      in animation, VFX, design, and multimedia.
+    </p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Phone: +91-9811398844</p>
+    <p>Email: gtb@arenaanimation.com</p>
+  </section>
+
+  <footer>
+    © 2026 Arena Animation GTB Nagar
+  </footer>
 
 </body>
 </html>
