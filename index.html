@@ -6,125 +6,339 @@
   <title>Arena Animation GTB Nagar</title>
 
   <style>
-    body {
-      margin: 0;
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
       font-family: Arial, sans-serif;
-      background: #f5f5f5;
-      color: #111;
+      background:#f5f5f5;
+      color:#111;
+      line-height:1.6;
     }
 
-    header {
-      background: #111;
-      color: white;
-      padding: 15px;
-      text-align: center;
+    /* HEADER */
+
+    header{
+      background:#000;
+      padding:18px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:sticky;
+      top:0;
+      z-index:1000;
     }
 
-    nav {
-      text-align: center;
-      background: #eee;
-      padding: 10px;
+    .logo{
+      font-size:24px;
+      font-weight:bold;
+      color:white;
     }
 
-    nav a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: #111;
-      font-weight: bold;
+    .logo span{
+      color:#ffd400;
     }
 
-    section {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
+    nav a{
+      color:white;
+      text-decoration:none;
+      margin-left:25px;
+      font-weight:bold;
+      transition:0.3s;
     }
 
-    .hero {
-      text-align: center;
-      background: white;
-      padding: 60px 20px;
+    nav a:hover{
+      color:#ffd400;
     }
 
-    .hero h1 {
-      margin: 0;
-      font-size: 32px;
+    /* HERO */
+
+    .hero{
+      min-height:90vh;
+      background:
+      linear-gradient(rgba(0,0,0,0.7),
+      rgba(0,0,0,0.7)),
+      url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1400&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      color:white;
+      padding:20px;
     }
 
-    .hero p {
-      color: #555;
-      margin-top: 10px;
+    .hero-content{
+      max-width:700px;
     }
 
-    .btn {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 10px 20px;
-      background: #111;
-      color: white;
-      text-decoration: none;
+    .hero h1{
+      font-size:55px;
+      margin-bottom:20px;
     }
 
-    .box {
-      background: white;
-      padding: 20px;
-      margin-top: 20px;
-      border: 1px solid #ddd;
+    .hero p{
+      font-size:20px;
+      color:#ddd;
+      margin-bottom:30px;
     }
 
-    footer {
-      text-align: center;
-      padding: 15px;
-      background: #111;
-      color: white;
-      margin-top: 40px;
+    .btn{
+      display:inline-block;
+      padding:14px 32px;
+      background:#ffd400;
+      color:#000;
+      text-decoration:none;
+      font-weight:bold;
+      border-radius:6px;
+      transition:0.3s;
     }
+
+    .btn:hover{
+      background:white;
+      transform:translateY(-3px);
+    }
+
+    /* SECTION */
+
+    section{
+      padding:80px 8%;
+    }
+
+    .title{
+      text-align:center;
+      margin-bottom:50px;
+    }
+
+    .title h2{
+      font-size:38px;
+      margin-bottom:10px;
+    }
+
+    .title p{
+      color:#666;
+    }
+
+    /* COURSES */
+
+    .course-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:25px;
+    }
+
+    .course-card{
+      background:white;
+      padding:30px 20px;
+      border-radius:12px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.08);
+      transition:0.3s;
+      text-align:center;
+    }
+
+    .course-card:hover{
+      transform:translateY(-8px);
+    }
+
+    .course-card h3{
+      margin-bottom:10px;
+      color:#111;
+    }
+
+    .course-card p{
+      color:#666;
+      font-size:15px;
+    }
+
+    /* ABOUT */
+
+    .about{
+      background:white;
+      border-radius:15px;
+      padding:40px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.08);
+      text-align:center;
+    }
+
+    .about p{
+      color:#555;
+      max-width:750px;
+      margin:auto;
+    }
+
+    /* CONTACT */
+
+    .contact-box{
+      background:#111;
+      color:white;
+      padding:40px;
+      border-radius:15px;
+      text-align:center;
+    }
+
+    .contact-box p{
+      margin:12px 0;
+      font-size:18px;
+    }
+
+    /* FOOTER */
+
+    footer{
+      background:#000;
+      color:white;
+      text-align:center;
+      padding:20px;
+      margin-top:40px;
+    }
+
+    /* MOBILE */
+
+    @media(max-width:768px){
+
+      header{
+        flex-direction:column;
+      }
+
+      nav{
+        margin-top:15px;
+      }
+
+      nav a{
+        margin:0 10px;
+      }
+
+      .hero h1{
+        font-size:38px;
+      }
+
+      .hero p{
+        font-size:17px;
+      }
+
+    }
+
   </style>
 </head>
 
 <body>
 
+  <!-- HEADER -->
+
   <header>
-    <h2>Arena Animation GTB Nagar</h2>
+
+    <div class="logo">
+      Arena <span>Animation</span>
+    </div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#courses">Courses</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
   </header>
 
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#courses">Courses</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <!-- HERO -->
 
   <section class="hero" id="home">
-    <h1>Build Your Creative Future</h1>
-    <p>Learn Animation, VFX, Design & More</p>
-    <a href="#courses" class="btn">Explore Courses</a>
+
+    <div class="hero-content">
+
+      <h1>Build Your Creative Future</h1>
+
+      <p>
+        Learn Animation, VFX, Graphic Design, UI/UX and Game Development
+        from industry experts.
+      </p>
+
+      <a href="#courses" class="btn">Explore Courses</a>
+
+    </div>
+
   </section>
+
+  <!-- COURSES -->
 
   <section id="courses">
-    <h2>Courses</h2>
 
-    <div class="box">Animation & VFX</div>
-    <div class="box">UI/UX Design</div>
-    <div class="box">Graphic Design</div>
-    <div class="box">Game Development</div>
+    <div class="title">
+      <h2>Our Courses</h2>
+      <p>Industry-focused creative programs</p>
+    </div>
+
+    <div class="course-container">
+
+      <div class="course-card">
+        <h3>Animation & VFX</h3>
+        <p>Learn 2D, 3D animation and visual effects.</p>
+      </div>
+
+      <div class="course-card">
+        <h3>UI/UX Design</h3>
+        <p>Create modern website and app interfaces.</p>
+      </div>
+
+      <div class="course-card">
+        <h3>Graphic Design</h3>
+        <p>Master Photoshop, Illustrator and branding.</p>
+      </div>
+
+      <div class="course-card">
+        <h3>Game Development</h3>
+        <p>Build interactive games and experiences.</p>
+      </div>
+
+    </div>
+
   </section>
+
+  <!-- ABOUT -->
 
   <section id="about">
-    <h2>About Us</h2>
-    <p>
-      Arena Animation GTB Nagar is a creative institute in Delhi offering industry-focused training
-      in animation, VFX, design, and multimedia.
-    </p>
+
+    <div class="title">
+      <h2>About Us</h2>
+    </div>
+
+    <div class="about">
+
+      <p>
+        Arena Animation GTB Nagar is a leading multimedia and design institute
+        in Delhi offering professional training in Animation, VFX, Graphics,
+        UI/UX and Gaming with practical learning and industry exposure.
+      </p>
+
+    </div>
+
   </section>
+
+  <!-- CONTACT -->
 
   <section id="contact">
-    <h2>Contact</h2>
-    <p>Phone: +91-9811398844</p>
-    <p>Email: gtb@arenaanimation.com</p>
+
+    <div class="title">
+      <h2>Contact Us</h2>
+    </div>
+
+    <div class="contact-box">
+
+      <p>📞 +91-9811398844</p>
+      <p>📧 gtb@arenaanimation.com</p>
+      <p>📍 GTB Nagar, Delhi</p>
+
+    </div>
+
   </section>
 
+  <!-- FOOTER -->
+
   <footer>
-    © 2026 Arena Animation GTB Nagar
+    © 2026 Arena Animation GTB Nagar | All Rights Reserved
   </footer>
 
 </body>
